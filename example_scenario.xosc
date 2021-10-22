@@ -1,0 +1,785 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OpenSCENARIO xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="OpenSCENARIO.xsd">
+   <FileHeader date="Mon Oct 26 11:34:32 2020" description="OpenSCENARIO Template" name="test"
+               revMajor="1"
+               revMinor="0"/>
+   <ParameterDeclarations/>
+   <CatalogLocations>
+      <VehicleCatalog>
+         <Directory path="../xosc/Catalogs/Vehicles"/>
+      </VehicleCatalog>
+   </CatalogLocations>
+   <RoadNetwork>
+      <LogicFile filepath="../xodr/A5_final_RFoffset.xodr"/>
+   </RoadNetwork>
+   <Entities>
+      <ScenarioObject name="Ego">
+         <CatalogReference catalogName="VehicleCatalog" entryName="car_white"/>
+      </ScenarioObject>
+      <ScenarioObject name="S1">
+         <CatalogReference catalogName="VehicleCatalog" entryName="car_red"/>
+      </ScenarioObject>
+      <ScenarioObject name="S2">
+         <CatalogReference catalogName="VehicleCatalog" entryName="car_red"/>
+      </ScenarioObject>
+      <ScenarioObject name="S4">
+         <CatalogReference catalogName="VehicleCatalog" entryName="car_red"/>
+      </ScenarioObject>
+      <ScenarioObject name="S5">
+         <CatalogReference catalogName="VehicleCatalog" entryName="car_red"/>
+      </ScenarioObject>
+   </Entities>
+   <Storyboard>
+      <Init>
+         <Actions>
+            <GlobalAction>
+               <EnvironmentAction>
+                  <Environment>
+                     <TimeOfDay animation="false" dateTime="2020-02-21T12:00:00"/>
+                     <Weather cloudState="free">
+                        <Sun azimuth="0.0" elevation="1.571" intensity="1.0"/>
+                        <Fog visualRange="100000.0"/>
+                        <Precipitation intensity="0.0" precipitationType="dry"/>
+                     </Weather>
+                     <RoadCondition frictionScaleFactor="1.0"/>
+                  </Environment>
+               </EnvironmentAction>
+            </GlobalAction>
+            <Private entityRef="Ego">
+               <PrivateAction>
+                  <TeleportAction>
+                     <Position>
+                        <WorldPosition x="991.68" y="4555.12" z="0"/>
+                     </Position>
+                  </TeleportAction>
+               </PrivateAction>
+            </Private>
+            <Private entityRef="S1">
+               <PrivateAction>
+                  <TeleportAction>
+                     <Position>
+                        <WorldPosition x="999.295" y="4615.4245" z="0"/>
+                     </Position>
+                  </TeleportAction>
+               </PrivateAction>
+            </Private>
+            <Private entityRef="S2">
+               <PrivateAction>
+                  <TeleportAction>
+                     <Position>
+                        <WorldPosition x="994.845" y="4641.6198" z="0"/>
+                     </Position>
+                  </TeleportAction>
+               </PrivateAction>
+            </Private>
+            <Private entityRef="S4">
+               <PrivateAction>
+                  <TeleportAction>
+                     <Position>
+                        <WorldPosition x="987.1795" y="4548.7866" z="0"/>
+                     </Position>
+                  </TeleportAction>
+               </PrivateAction>
+            </Private>
+            <Private entityRef="S5">
+               <PrivateAction>
+                  <TeleportAction>
+                     <Position>
+                        <WorldPosition x="988.881" y="4615.2194" z="0"/>
+                     </Position>
+                  </TeleportAction>
+               </PrivateAction>
+            </Private>
+         </Actions>
+      </Init>
+      <Story name="Mystory">
+         <Act name="Act0">
+            <ManeuverGroup maximumExecutionCount="1" name="Sequence0">
+               <Actors selectTriggeringEntities="false">
+                  <EntityRef entityRef="Ego"/>
+               </Actors>
+               <Maneuver name="Maneuver0">
+                  <Event name="Event0" priority="overwrite">
+                     <Action name="Action0">
+                        <PrivateAction>
+                           <RoutingAction>
+                              <FollowTrajectoryAction>
+                                 <Trajectory closed="false" name="Trajectory0">
+                                    <Shape>
+                                       <Polyline>
+                                          <Vertex time="0.22303">
+                                             <Position>
+                                                <WorldPosition h="1.4398" x="992.41" y="4560.66" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.42827">
+                                             <Position>
+                                                <WorldPosition h="1.4409" x="993.1" y="4565.94" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.66286">
+                                             <Position>
+                                                <WorldPosition h="1.442" x="993.85" y="4571.73" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.87404">
+                                             <Position>
+                                                <WorldPosition h="1.4411" x="994.54" y="4577.02" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.1139">
+                                             <Position>
+                                                <WorldPosition h="1.4418" x="995.36" y="4583.34" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.3154">
+                                             <Position>
+                                                <WorldPosition h="1.443" x="996.01" y="4588.4" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.5301">
+                                             <Position>
+                                                <WorldPosition h="1.4455" x="996.68" y="4593.72" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.7538">
+                                             <Position>
+                                                <WorldPosition h="1.4448" x="997.42" y="4599.56" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.9851">
+                                             <Position>
+                                                <WorldPosition h="1.4462" x="998.12" y="4605.15" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.1865">
+                                             <Position>
+                                                <WorldPosition h="1.4462" x="998.79" y="4610.5" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.3876">
+                                             <Position>
+                                                <WorldPosition h="1.4462" x="999.43" y="4615.61" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.6189">
+                                             <Position>
+                                                <WorldPosition h="1.4473" x="1000.16" y="4621.49" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.8299">
+                                             <Position>
+                                                <WorldPosition h="1.4474" x="1000.83" y="4626.89" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="3.0285">
+                                             <Position>
+                                                <WorldPosition h="1.4472" x="1001.47" y="4632.04" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                       </Polyline>
+                                    </Shape>
+                                 </Trajectory>
+                                 <TimeReference>
+                                    <Timing domainAbsoluteRelative="relative" offset="0.0" scale="1.0"/>
+                                 </TimeReference>
+                                 <TrajectoryFollowingMode FollowingMode="follow"/>
+                              </FollowTrajectoryAction>
+                           </RoutingAction>
+                        </PrivateAction>
+                     </Action>
+                     <StartTrigger>
+                        <ConditionGroup>
+                           <Condition conditionEdge="none" delay="0" name="">
+                              <ByValueCondition>
+                                 <StoryboardElementStateCondition state="startTransition" storyboardElementRef="Act0" storyboardElementType="act"/>
+                              </ByValueCondition>
+                           </Condition>
+                        </ConditionGroup>
+                     </StartTrigger>
+                  </Event>
+               </Maneuver>
+            </ManeuverGroup>
+            <StartTrigger>
+               <ConditionGroup>
+                  <Condition conditionEdge="rising" delay="0" name="StartCondition1">
+                     <ByValueCondition>
+                        <SimulationTimeCondition rule="greaterThan" value="0"/>
+                     </ByValueCondition>
+                  </Condition>
+               </ConditionGroup>
+            </StartTrigger>
+         </Act>
+         <Act name="Act1">
+            <ManeuverGroup maximumExecutionCount="1" name="Sequence1">
+               <Actors selectTriggeringEntities="false">
+                  <EntityRef entityRef="S1"/>
+               </Actors>
+               <Maneuver name="Maneuver1">
+                  <Event name="Event1" priority="overwrite">
+                     <Action name="Action1">
+                        <PrivateAction>
+                           <RoutingAction>
+                              <FollowTrajectoryAction>
+                                 <Trajectory closed="false" name="Trajectory1">
+                                    <Shape>
+                                       <Polyline>
+                                          <Vertex time="0.16383">
+                                             <Position>
+                                                <WorldPosition h="1.4286" x="999.8902" y="4619.5824" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.32858">
+                                             <Position>
+                                                <WorldPosition h="1.4641" x="1000.3364" y="4623.7475" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.49286">
+                                             <Position>
+                                                <WorldPosition h="1.4298" x="1000.8914" y="4627.6589" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.65759">
+                                             <Position>
+                                                <WorldPosition h="1.4574" x="1001.3534" y="4631.7164" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.82235">
+                                             <Position>
+                                                <WorldPosition h="1.4754" x="1001.7403" y="4635.759" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.98712">
+                                             <Position>
+                                                <WorldPosition h="1.4775" x="1002.1387" y="4640.0186" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.1514">
+                                             <Position>
+                                                <WorldPosition h="1.4529" x="1002.6219" y="4644.0967" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.3152">
+                                             <Position>
+                                                <WorldPosition h="1.4706" x="1003.0365" y="4648.2197" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.4795">
+                                             <Position>
+                                                <WorldPosition h="1.4422" x="1003.5491" y="4652.1837" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.6434">
+                                             <Position>
+                                                <WorldPosition h="1.4648" x="1003.9826" y="4656.2574" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.8081">
+                                             <Position>
+                                                <WorldPosition h="1.4135" x="1004.6062" y="4660.1883" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.972">
+                                             <Position>
+                                                <WorldPosition h="1.4392" x="1005.1475" y="4664.2788" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.1372">
+                                             <Position>
+                                                <WorldPosition h="1.423" x="1005.7697" y="4668.4585" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.3015">
+                                             <Position>
+                                                <WorldPosition h="1.4399" x="1006.3111" y="4672.5715" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.466">
+                                             <Position>
+                                                <WorldPosition h="1.4518" x="1006.7773" y="4676.4717" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.63">
+                                             <Position>
+                                                <WorldPosition h="1.4404" x="1007.3285" y="4680.6743" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.7943">
+                                             <Position>
+                                                <WorldPosition h="1.4674" x="1007.7556" y="4684.7883" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.9591">
+                                             <Position>
+                                                <WorldPosition h="1.4431" x="1008.2804" y="4688.8756" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="3.1234">
+                                             <Position>
+                                                <WorldPosition h="1.4309" x="1008.8551" y="4692.9569" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                       </Polyline>
+                                    </Shape>
+                                 </Trajectory>
+                                 <TimeReference>
+                                    <Timing domainAbsoluteRelative="relative" offset="0.0" scale="1.0"/>
+                                 </TimeReference>
+                                 <TrajectoryFollowingMode FollowingMode="follow"/>
+                              </FollowTrajectoryAction>
+                           </RoutingAction>
+                        </PrivateAction>
+                     </Action>
+                     <StartTrigger>
+                        <ConditionGroup>
+                           <Condition conditionEdge="none" delay="0" name="">
+                              <ByValueCondition>
+                                 <StoryboardElementStateCondition state="startTransition" storyboardElementRef="Act1" storyboardElementType="act"/>
+                              </ByValueCondition>
+                           </Condition>
+                        </ConditionGroup>
+                     </StartTrigger>
+                  </Event>
+               </Maneuver>
+            </ManeuverGroup>
+            <StartTrigger>
+               <ConditionGroup>
+                  <Condition conditionEdge="rising" delay="0" name="StartCondition1">
+                     <ByValueCondition>
+                        <SimulationTimeCondition rule="greaterThan" value="0"/>
+                     </ByValueCondition>
+                  </Condition>
+               </ConditionGroup>
+            </StartTrigger>
+         </Act>
+         <Act name="Act2">
+            <ManeuverGroup maximumExecutionCount="1" name="Sequence2">
+               <Actors selectTriggeringEntities="false">
+                  <EntityRef entityRef="S2"/>
+               </Actors>
+               <Maneuver name="Maneuver2">
+                  <Event name="Event2" priority="overwrite">
+                     <Action name="Action2">
+                        <PrivateAction>
+                           <RoutingAction>
+                              <FollowTrajectoryAction>
+                                 <Trajectory closed="false" name="Trajectory2">
+                                    <Shape>
+                                       <Polyline>
+                                          <Vertex time="0.16383">
+                                             <Position>
+                                                <WorldPosition h="1.4407" x="995.5717" y="4647.1725" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.32858">
+                                             <Position>
+                                                <WorldPosition h="1.4493" x="996.2549" y="4652.7689" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.49286">
+                                             <Position>
+                                                <WorldPosition h="1.4993" x="996.6914" y="4658.864" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.65759">
+                                             <Position>
+                                                <WorldPosition h="1.4642" x="997.2694" y="4664.2655" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.82235">
+                                             <Position>
+                                                <WorldPosition h="1.5337" x="997.4764" y="4669.8374" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.98712">
+                                             <Position>
+                                                <WorldPosition h="1.5089" x="997.8775" y="4676.3072" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.1514">
+                                             <Position>
+                                                <WorldPosition h="1.5172" x="998.1782" y="4681.9147" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.3152">
+                                             <Position>
+                                                <WorldPosition h="1.4345" x="998.9302" y="4687.397" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.4795">
+                                             <Position>
+                                                <WorldPosition h="1.4386" x="999.6474" y="4692.7906" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.6434">
+                                             <Position>
+                                                <WorldPosition h="1.3472" x="1000.8822" y="4698.2198" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.8081">
+                                             <Position>
+                                                <WorldPosition h="1.4034" x="1001.9122" y="4704.3139" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.972">
+                                             <Position>
+                                                <WorldPosition h="1.4349" x="1002.6672" y="4709.8361" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.1372">
+                                             <Position>
+                                                <WorldPosition h="1.3997" x="1003.7539" y="4716.1245" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.3015">
+                                             <Position>
+                                                <WorldPosition h="1.4798" x="1004.2716" y="4721.7996" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.466">
+                                             <Position>
+                                                <WorldPosition h="1.4166" x="1005.0975" y="4727.1135" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.63">
+                                             <Position>
+                                                <WorldPosition h="1.4541" x="1005.7655" y="4732.8103" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.7943">
+                                             <Position>
+                                                <WorldPosition h="1.4654" x="1006.421" y="4739.0077" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.9591">
+                                             <Position>
+                                                <WorldPosition h="1.423" x="1007.2558" y="4744.6146" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="3.1234">
+                                             <Position>
+                                                <WorldPosition h="1.45" x="1007.9277" y="4750.1476" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                       </Polyline>
+                                    </Shape>
+                                 </Trajectory>
+                                 <TimeReference>
+                                    <Timing domainAbsoluteRelative="relative" offset="0.0" scale="1.0"/>
+                                 </TimeReference>
+                                 <TrajectoryFollowingMode FollowingMode="follow"/>
+                              </FollowTrajectoryAction>
+                           </RoutingAction>
+                        </PrivateAction>
+                     </Action>
+                     <StartTrigger>
+                        <ConditionGroup>
+                           <Condition conditionEdge="none" delay="0" name="">
+                              <ByValueCondition>
+                                 <StoryboardElementStateCondition state="startTransition" storyboardElementRef="Act2" storyboardElementType="act"/>
+                              </ByValueCondition>
+                           </Condition>
+                        </ConditionGroup>
+                     </StartTrigger>
+                  </Event>
+               </Maneuver>
+            </ManeuverGroup>
+            <StartTrigger>
+               <ConditionGroup>
+                  <Condition conditionEdge="rising" delay="0" name="StartCondition1">
+                     <ByValueCondition>
+                        <SimulationTimeCondition rule="greaterThan" value="0"/>
+                     </ByValueCondition>
+                  </Condition>
+               </ConditionGroup>
+            </StartTrigger>
+         </Act>
+         <Act name="Act4">
+            <ManeuverGroup maximumExecutionCount="1" name="Sequence4">
+               <Actors selectTriggeringEntities="false">
+                  <EntityRef entityRef="S4"/>
+               </Actors>
+               <Maneuver name="Maneuver4">
+                  <Event name="Event4" priority="overwrite">
+                     <Action name="Action4">
+                        <PrivateAction>
+                           <RoutingAction>
+                              <FollowTrajectoryAction>
+                                 <Trajectory closed="false" name="Trajectory4">
+                                    <Shape>
+                                       <Polyline>
+                                          <Vertex time="0.16383">
+                                             <Position>
+                                                <WorldPosition h="1.4833" x="987.6911" y="4554.6202" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.32858">
+                                             <Position>
+                                                <WorldPosition h="1.4305" x="988.4943" y="4560.3083" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.49286">
+                                             <Position>
+                                                <WorldPosition h="1.4277" x="989.3447" y="4566.2099" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.65759">
+                                             <Position>
+                                                <WorldPosition h="1.4689" x="989.8499" y="4571.1493" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.82235">
+                                             <Position>
+                                                <WorldPosition h="1.4665" x="990.4867" y="4577.2336" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.98712">
+                                             <Position>
+                                                <WorldPosition h="1.3567" x="991.6768" y="4582.7057" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.1514">
+                                             <Position>
+                                                <WorldPosition h="1.5067" x="992.0188" y="4588.0342" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.3152">
+                                             <Position>
+                                                <WorldPosition h="1.44" x="992.8714" y="4594.5156" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.4795">
+                                             <Position>
+                                                <WorldPosition h="1.4559" x="993.3502" y="4598.6637" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.6434">
+                                             <Position>
+                                                <WorldPosition h="1.4542" x="994.1041" y="4605.0986" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.8081">
+                                             <Position>
+                                                <WorldPosition h="1.4477" x="994.8573" y="4611.1838" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.972">
+                                             <Position>
+                                                <WorldPosition h="1.4555" x="995.485" y="4616.6041" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.1372">
+                                             <Position>
+                                                <WorldPosition h="1.4364" x="996.2176" y="4622.0233" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.3015">
+                                             <Position>
+                                                <WorldPosition h="1.4475" x="996.9381" y="4627.8367" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.466">
+                                             <Position>
+                                                <WorldPosition h="1.4563" x="997.5546" y="4633.1975" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.63">
+                                             <Position>
+                                                <WorldPosition h="1.4452" x="998.3718" y="4639.6689" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.7943">
+                                             <Position>
+                                                <WorldPosition h="1.4584" x="998.9639" y="4644.9145" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.9591">
+                                             <Position>
+                                                <WorldPosition h="1.4541" x="999.7" y="4651.1959" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="3.1234">
+                                             <Position>
+                                                <WorldPosition h="1.4455" x="1000.3945" y="4656.7114" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                       </Polyline>
+                                    </Shape>
+                                 </Trajectory>
+                                 <TimeReference>
+                                    <Timing domainAbsoluteRelative="relative" offset="0.0" scale="1.0"/>
+                                 </TimeReference>
+                                 <TrajectoryFollowingMode FollowingMode="follow"/>
+                              </FollowTrajectoryAction>
+                           </RoutingAction>
+                        </PrivateAction>
+                     </Action>
+                     <StartTrigger>
+                        <ConditionGroup>
+                           <Condition conditionEdge="none" delay="0" name="">
+                              <ByValueCondition>
+                                 <StoryboardElementStateCondition state="startTransition" storyboardElementRef="Act4" storyboardElementType="act"/>
+                              </ByValueCondition>
+                           </Condition>
+                        </ConditionGroup>
+                     </StartTrigger>
+                  </Event>
+               </Maneuver>
+            </ManeuverGroup>
+            <StartTrigger>
+               <ConditionGroup>
+                  <Condition conditionEdge="rising" delay="0" name="StartCondition1">
+                     <ByValueCondition>
+                        <SimulationTimeCondition rule="greaterThan" value="0"/>
+                     </ByValueCondition>
+                  </Condition>
+               </ConditionGroup>
+            </StartTrigger>
+         </Act>
+         <Act name="Act5">
+            <ManeuverGroup maximumExecutionCount="1" name="Sequence5">
+               <Actors selectTriggeringEntities="false">
+                  <EntityRef entityRef="S5"/>
+               </Actors>
+               <Maneuver name="Maneuver5">
+                  <Event name="Event5" priority="overwrite">
+                     <Action name="Action5">
+                        <PrivateAction>
+                           <RoutingAction>
+                              <FollowTrajectoryAction>
+                                 <Trajectory closed="false" name="Trajectory5">
+                                    <Shape>
+                                       <Polyline>
+                                          <Vertex time="0.16383">
+                                             <Position>
+                                                <WorldPosition h="1.4326" x="989.7284" y="4621.311" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.32858">
+                                             <Position>
+                                                <WorldPosition h="1.4569" x="990.4202" y="4627.3601" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.49286">
+                                             <Position>
+                                                <WorldPosition h="1.4784" x="991.0529" y="4634.1859" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.65759">
+                                             <Position>
+                                                <WorldPosition h="1.4348" x="991.7348" y="4639.1699" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.82235">
+                                             <Position>
+                                                <WorldPosition h="1.4623" x="992.4879" y="4646.0811" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="0.98712">
+                                             <Position>
+                                                <WorldPosition h="1.4508" x="993.346" y="4653.1962" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.1514">
+                                             <Position>
+                                                <WorldPosition h="1.4513" x="994.0671" y="4659.2025" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.3152">
+                                             <Position>
+                                                <WorldPosition h="1.4813" x="994.6066" y="4665.2146" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.4795">
+                                             <Position>
+                                                <WorldPosition h="1.462" x="995.2462" y="4671.0705" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.6434">
+                                             <Position>
+                                                <WorldPosition h="1.4439" x="996.0104" y="4677.0617" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.8081">
+                                             <Position>
+                                                <WorldPosition h="1.4429" x="996.8933" y="4683.9292" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="1.972">
+                                             <Position>
+                                                <WorldPosition h="1.4429" x="997.6553" y="4689.8528" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.1372">
+                                             <Position>
+                                                <WorldPosition h="1.4467" x="998.5433" y="4696.9721" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.3015">
+                                             <Position>
+                                                <WorldPosition h="1.4357" x="999.3713" y="4703.0611" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.466">
+                                             <Position>
+                                                <WorldPosition h="1.4436" x="1000.1103" y="4708.8384" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.63">
+                                             <Position>
+                                                <WorldPosition h="1.4605" x="1000.7964" y="4715.0358" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.7943">
+                                             <Position>
+                                                <WorldPosition h="1.4643" x="1001.4371" y="4721.032" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="2.9591">
+                                             <Position>
+                                                <WorldPosition h="1.4551" x="1002.2529" y="4728.0503" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                          <Vertex time="3.1234">
+                                             <Position>
+                                                <WorldPosition h="1.4094" x="1003.2221" y="4734.0012" z="0"/>
+                                             </Position>
+                                          </Vertex>
+                                       </Polyline>
+                                    </Shape>
+                                 </Trajectory>
+                                 <TimeReference>
+                                    <Timing domainAbsoluteRelative="relative" offset="0.0" scale="1.0"/>
+                                 </TimeReference>
+                                 <TrajectoryFollowingMode FollowingMode="follow"/>
+                              </FollowTrajectoryAction>
+                           </RoutingAction>
+                        </PrivateAction>
+                     </Action>
+                     <StartTrigger>
+                        <ConditionGroup>
+                           <Condition conditionEdge="none" delay="0" name="">
+                              <ByValueCondition>
+                                 <StoryboardElementStateCondition state="startTransition" storyboardElementRef="Act5" storyboardElementType="act"/>
+                              </ByValueCondition>
+                           </Condition>
+                        </ConditionGroup>
+                     </StartTrigger>
+                  </Event>
+               </Maneuver>
+            </ManeuverGroup>
+            <StartTrigger>
+               <ConditionGroup>
+                  <Condition conditionEdge="rising" delay="0" name="StartCondition1">
+                     <ByValueCondition>
+                        <SimulationTimeCondition rule="greaterThan" value="0"/>
+                     </ByValueCondition>
+                  </Condition>
+               </ConditionGroup>
+            </StartTrigger>
+         </Act>
+      </Story>
+      <StopTrigger/>
+   </Storyboard>
+</OpenSCENARIO>
